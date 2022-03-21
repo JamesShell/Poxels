@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --fs-xl: 5.5rem;
+  --fs-600: 1.62rem;
+  --fs-500: 1rem;
+  --fs-400: .7rem;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --fs-xl: 3.8rem;
+    --fs-600: 1.1rem;
+    --fs-500: .8rem;
+    --fs-400: .525rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-xl: 3.2rem;
+    --fs-600: 0.975rem;
+    --fs-500: .625rem;
+    --fs-400: .5rem;
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+@font-face {
+  font-family: Press Start 2P;
+  src: url(assets/fonts/PressStart2P-Regular.ttf) format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Press Start 2P';
+  background-color: #04091e;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #271737;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/*# sourceMappingURL=styles.css.map */

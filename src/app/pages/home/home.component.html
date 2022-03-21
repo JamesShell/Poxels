@@ -13,164 +13,153 @@
 </header>
 
 <main>
-    <section class="whosarewe section">
+    <section id="whosarewe">
         <h2 class="section-title">WHO'S ARE WE</h2>
         <div class="progress">
             <div class="progress-slot">
-                <h1 class="value">6k</h1>
+                <h1 class="value">{{supply}}</h1>
                 <h4 class="title">items</h4>
             </div>
             <div class="progress-slot">
-                <h1 class="value">10%</h1>
+                <h1 class="value">{{soldedP}}%</h1>
                 <h4 class="title">sold</h4>
             </div>
             <div class="progress-slot">
-                <h1 class="value">99</h1>
+                <h1 class="value">{{traded}}</h1>
                 <h4 class="title">traded</h4>
             </div>
         </div>
-        <p class="about">Poxels is a collection of 2666 unique pixel art NFTs,<br>siting in Polygon Blockchain by holding a Poxel<br>uou will be able to participate in our NFT giveaways<br>and events.</p>
+        <p class="about">Poxels is a collection of 2666 unique pixel art NFTs,<br>represent the humans in 2030 living happy, peaceful live in the<br>metaverse, each Poxel is Unique and have special personality.<br><a class="find-your-poxel" href="https://opensea.io/collection/poxels-nft" target="_blank" rel="noopener noreferrer">Find the Poxel that represent you!</a>
         <div class="poxels">
             <i class="uil uil-angle-left pre-btn btn"></i>
             <i class="uil uil-angle-right next-btn btn"></i>
-            <div class="poxel-container">
-                <div class="poxel-card">
+            <div class="poxel-container" >
+                <div class="poxel-card" *ngFor="let poxel of mostLikedPoxels">
                     <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/0.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
+                        <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/{{poxel.tokenID}}" target="_blank" rel="noopener noreferrer"><img src="{{poxel.imgSrc}}"class="poxel-thumb" alt=""></a>
                     </div>
                     <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/1.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/3.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/4.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/5.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/6.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/7.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/8.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
-                    </div>
-                </div>
-                <div class="poxel-card">
-                    <div class="poxel-img">
-                        <img src="./../../../assets/img/slider/9.png"class="poxel-thumb" alt="">
-                        <a href="" class="card-btn btn">BUY</a>
-                    </div>
-                    <div class="poxel-info">
-                        <h2 class="poxel-name">Poxel #167</h2>
+                        <h2 class="poxel-name">{{poxel.name}}</h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="roadmap">
+    <section id="roadmap">
         <h2 class="section-title">ROADMAP</h2>
-        <div class="road">
-            <div class="road-slot fade-in from-left">
+        <div class="road flex-container">
+            <div class="road-slot fade-in ">
                 <div class="road-slot-head">
-                    <p class="selling-percentage">22%</p>
-                    <h1>Community</h1>
-                    <span>- May 17</span>
+                    <h1 class="index">1</h1>
+                    <h1 class="title">Community</h1>
                 </div>
-                <p class="road-slot-description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus reiciendis necessitatibus iure quidem cum, dicta voluptates eius sequi molestias voluptatum, adipisci enim reprehenderit perferendis, laborum dolorem officia ea? Nulla, cumque.
-                </p>
+                <div class="road-slot-description">
+                    <p>
+                        As everyone know the community is everything, that's why we need to build strong and big community where we can talk and have fun.<br>that's not easy, that's why we need:
+                    </p>
+                    <ul>
+                        <li>Advenced Markiting</li>
+                        <li>NFT Giveaways</li>
+                        <li>Art Compitions</li>
+                    </ul>
+                </div>
             </div>
-            <div class="road-slot fade-in from-right">
+            <div class="road-slot fade-in ">
                 <div class="road-slot-head">
-                    <p class="selling-percentage">22%</p>
-                    <h1>Community</h1>
-                    <span>- May 17</span>
+                    <h1 class="index">2</h1>
+                    <h1 class="title">Merch</h1>
                 </div>
-                <p class="road-slot-description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus reiciendis necessitatibus iure quidem cum, dicta voluptates eius sequi molestias voluptatum, adipisci enim reprehenderit perferendis, laborum dolorem officia ea? Nulla, cumque.
-                </p>
+                <div class="road-slot-description">
+                    Poxels online merch store, and of course we will do some spicial discounts for holders.
+                </div>
             </div>
-            <div class="road-slot fade-in from-left">
+            <div class="road-slot fade-in">
                 <div class="road-slot-head">
-                    <p class="selling-percentage">22%</p>
-                    <h1>Community</h1>
-                    <span>- May 17</span>
+                    <h1 class="index">3</h1>
+                    <h1 class="title">$POX Token</h1>
                 </div>
-                <p class="road-slot-description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus reiciendis necessitatibus iure quidem cum, dicta voluptates eius sequi molestias voluptatum, adipisci enim reprehenderit perferendis, laborum dolorem officia ea? Nulla, cumque.
-                </p>
+                <div class="road-slot-description">
+                    Poxel($POX) is a Polygon Token, the main coin in the coming game.
+                </div>
             </div>
-            <div class="road-slot fade-in from-right">
+            <div class="road-slot fade-in">
                 <div class="road-slot-head">
-                    
-<p class="selling-percentage">22%</p>
-                    <h1>Community</h1>
-                    <span>- May 17</span>
+                    <h1 class="index">4</h1>
+                    <h1 class="title">Donation</h1>
                 </div>
-                <p class="road-slot-description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus reiciendis necessitatibus iure quidem cum, dicta voluptates eius sequi molestias voluptatum, adipisci enim reprehenderit perferendis, laborum dolorem officia ea? Nulla, cumque.
-                </p>
+                <div class="road-slot-description">
+                    <p>
+                        We need to give back to the world by donating a part of royalties to a non-profit organization. The Community will chose!
+                    </p>
+                </div>
             </div>
-            <div class="road-slot fade-in from-left">
+            <div class="road-slot fade-in ">
                 <div class="road-slot-head">
-                    <p class="selling-percentage">22%</p>
-                    <h1>Community</h1>
-                    <span>- May 17</span>
+                    <h1 class="index">5</h1>
+                    <h1 class="title">The Game</h1>
                 </div>
-                <p class="road-slot-description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus reiciendis necessitatibus iure quidem cum, dicta voluptates eius sequi molestias voluptatum, adipisci enim reprehenderit perferendis, laborum dolorem officia ea? Nulla, cumque.
-                </p>
+                <div class="road-slot-description">
+                    As soon as we sold out we will start the developpement of Poxels: a crypto game in the theme of building & growing a farm
+                </div>
+            </div>
+            <div class="road-slot fade-in ">
+                <div class="road-slot-head">
+                    <h1 class="index">6</h1>
+                    <h1 class="title">What Next?</h1>
+                </div>
+                <div class="road-slot-description">
+                    As we said earlier, the community is everything. so we will let them chose the future of this project.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team">
+        <h2 class="section-title">TEAM</h2>
+        <p class="the-team">This is the team behind everything.</p>
+        <div class="team-members flex-container">
+            <div class="member">
+                <div class="member-header">
+                    <h1>James Jones</h1>
+                </div>
+                <div class="member-body">
+                    <img src="./../../../assets/img/team/James Jones.png" alt="">
+                </div>
+                <div class="member-desc">
+                    <p>Develloper</p>
+                </div>
+            </div>
+            <div class="member">
+                <div class="member-header">
+                    <h1>Emily Moore</h1>
+                </div>
+                <div class="member-body">
+                    <img src="./../../../assets/img/team/Emily Moore.png" alt="">
+                </div>
+                <div class="member-desc">
+                    <p>Artist</p>
+                </div>
+            </div>
+            <div class="member">
+                <div class="member-header">
+                    <h1>Trevor Davis</h1>
+                </div>
+                <div class="member-body">
+                    <img src="./../../../assets/img/team/Trevor Davis.png" alt="">
+                </div>
+                <div class="member-desc">
+                    <p>Marketer</p>
+                </div>
+            </div>
+            <div class="member">
+                <div class="member-header">
+                    <h1>Jack Taylor</h1>
+                </div>
+                <div class="member-body">
+                    <img src="./../../../assets/img/team/Jack Taylor.png" alt="">
+                </div>
+                <div class="member-desc">
+                    <p>Socials</p>
+                </div>
             </div>
         </div>
     </section>

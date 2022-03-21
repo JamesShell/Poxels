@@ -1,0 +1,32 @@
+.coming-soon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(
+            to top, #271737, #04091e,);
+}
+
+.coming-soon h1 {
+    font-size: var(--fs-600);
+    margin: 45px auto;
+    text-align: center;
+    color: white;
+    text-shadow: 0 .5px 0 #ccc, 0 1px 0 #ccc,
+                 0 1.5px 0 #ccc, 0 2px 0 #ccc,
+                 0 2.5px 0 #ccc, 0 3px 0 #ccc,
+                 0 3.5px 0 #ccc, 0 4px 0 #ccc,
+                 0 4.5px 0 #ccc, 0 5px 0 #ccc,
+                 0 5.5px 0 #ccc, 0 6px 0 #ccc,
+                 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.coming-soon {
+    font-size: var(--fs-500)
+}
+
+.coming-soon a:hover{
+    background-color: #04091e;
+}
